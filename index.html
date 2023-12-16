@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P90D - Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="logo">
+    <div class="content">
+      <img src="img/logo.png" alt="logo do projeto 90 dias">
+      <h1>Projeto 90 dias🔱</h1>
+    </div>
+  </div>
+  <div class="box">
+    <form action="">
+      <fieldset>
+        <legend><b>CADASTRO</b></legend>
+        <div class="inputBox">
+          <input type="text" name="nome" id="nome" class="inputUser" required>
+          <label for="nome" class="inputLabel">Nome</label>
+        </div>
+        <br>
+        <div class="inputBox">
+          <input type="text" name="contato" id="contato" class="inputUser" required>
+          <label for="contato" class="inputLabel">telefone ou email (para contato)</label>
+        </div>
+        <br>
+        <div class="objetivo">
+          <p>Objetivo:</p>
+          <br>
+          <input type="radio" name="objetivo" value="Força" required id="forca">
+          <label for="forca">Força</label>
+          <br>
+          <br>
+          <input type="radio" name="objetivo" value="hipertrofia" required id="hipertrofia">
+          <label for="hipertrofia">Hipertrofia</label>
+          <br>
+          <br>
+          <input type="radio" name="objetivo" value="ambos" required id="ambos">
+          <label for="ambos">Força e Hipertrofia</label>
+          <br>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <input type="number" name="idade" id="idade" class="inputUser" required>
+          <label for="idade" class="inputLabel" class="inputLabel">Idade Atual</label>
+        </div>
+        <br>
+        <div class="inputBox">
+          <input type="number" name="peso" id="peso" class="inputUser" required>
+          <label for="peso" class="inputLabel">Peso Atual</label>
+        </div>
+        <br>
+        <div class="inputBox">
+          <input type="number" name="altura" id="altura" class="inputUser" required>
+          <label for="altura" class="inputLabel">Altura Atual</label>
+        </div>
+        <br>
+        <input type="submit" value="Enviar" name="submit" id="submit">
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
