@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>P90D - Cadastro</title>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
   <div class="logo">
     <div class="content">
-      <img src="img/logo.png" alt="logo do projeto 90 dias">
+      <img src="logo.png" alt="logo do projeto 90 dias">
       <h1>Projeto 90 dias🔱</h1>
     </div>
   </div>
   <div class="box">
-    <form action="">
+    <form action="index.php" method="POST">
       <fieldset>
         <legend><b>CADASTRO</b></legend>
+        <h1>Contato</h1>
         <div class="inputBox">
           <input type="text" name="nome" id="nome" class="inputUser" required>
           <label for="nome" class="inputLabel">Nome</label>
@@ -28,40 +29,107 @@
           <label for="contato" class="inputLabel">telefone ou email (para contato)</label>
         </div>
         <br>
+        <br>
+        <h1>Dieta</h1>
         <div class="objetivo">
-          <p>Objetivo:</p>
+            <p>Qual seu objetivo nesta dieta?</p>
+            <br>
+            <input type="radio" name="dieta" id="emagrecer" value="Emagrecer">
+            <label for="emagrecer">Emagrecer</label>
+            <br>
+            <br>
+            <input type="radio" name="dieta" id="ganharMassa" value="Ganho de massa">
+            <label for="ganharMassa">Ganho de massa</label>
+            <br>
+            <br>
+            <input type="radio" name="dieta" id="definicao" value="Definição">
+            <label for="definicao">Definição</label>
+            <br>
+            <br>
+            <br>
+            <p>Informações que precisamos</p>
+            <br>
+            <br>
+            <div class="sexo">
+            <p>Sexo:</p>
+            <br>
+            <input type="radio" name="sexo" value="masculino" required id="masculino">
+            <label for="masculino">Masculino</label>
+            <br>
+            <br>
+            <input type="radio" name="sexo" value="feminino" required id="feminino">
+            <label for="feminino">Feminino</label>
+          </div>
+          <br><br>
+          <div class="inputBox">
+            <input type="number" name="idade" id="idade" class="inputUser" required min="1" max="100">
+            <label for="idade" class="inputLabel" class="inputLabel">Idade Atual</label>
+          </div>
           <br>
-          <input type="radio" name="objetivo" value="Força" required id="forca">
-          <label for="forca">Força</label>
+          <div class="inputBox">
+            <input type="number" name="peso" id="peso" class="inputUser" required min="1" max="500">
+            <label for="peso" class="inputLabel">Peso Atual (quilos)</label>
+          </div>
           <br>
+          <div class="inputBox">
+            <input type="float" name="altura" id="altura" class="inputUser" required min="1" max="300">
+            <label for="altura" class="inputLabel">Altura Atual (centímetros)</label>
+          </div>
           <br>
-          <input type="radio" name="objetivo" value="hipertrofia" required id="hipertrofia">
-          <label for="hipertrofia">Hipertrofia</label>
+          <h1>Treino</h1>
           <br>
-          <br>
-          <input type="radio" name="objetivo" value="ambos" required id="ambos">
-          <label for="ambos">Força e Hipertrofia</label>
-          <br>
-        </div>
-        <br><br>
-        <div class="inputBox">
-          <input type="number" name="idade" id="idade" class="inputUser" required>
-          <label for="idade" class="inputLabel" class="inputLabel">Idade Atual</label>
-        </div>
-        <br>
-        <div class="inputBox">
-          <input type="number" name="peso" id="peso" class="inputUser" required>
-          <label for="peso" class="inputLabel">Peso Atual</label>
-        </div>
-        <br>
-        <div class="inputBox">
-          <input type="number" name="altura" id="altura" class="inputUser" required>
-          <label for="altura" class="inputLabel">Altura Atual</label>
-        </div>
-        <br>
+          <p>Qual seu objetivo ao treinar?</p>
+            <br>
+            <input type="radio" name="treino" id="forca" value="Força">
+            <label for="forca">Força</label>
+            <br>
+            <br>
+            <input type="radio" name="treino" id="hipertrofia" value="Hipertrofia">
+            <label for="hipertrofia">Hipertrofia</label>
+            <br>
+            <br>
+            <input type="radio" name="treino" id="resistencia" value="Resistência">
+            <label for="resistencia">Resistência</label>
+            <br>
+            <br>
+            <br>
+            <p>Informações que precisamos</p>
+            <br>
+            <br>
+            <div class="semana">
+            <div class="inputBox">
+              <input type="number" name="dias" required id="dias" class="inputUser" min="1" max="7">
+              <label for="dias" class="inputLabel">Quantos dias você pode treinar na semana?</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+              <input type="text" name="diasDisponiveis" required id="diasDisponiveis" class="inputUser">
+              <label for="diasDisponiveis" class="inputLabel">Quais são esses dias?</label>
+            </div>
         <input type="submit" value="Enviar" name="submit" id="submit">
-      </fieldset>
-    </form>
+        </div>
+    </fieldset>
+  </form>
   </div>
+  <style>
+    .objetivo select {
+      background: #0a0a0a;
+      border: none;
+      border-bottom: 1px solid #fff;
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      font-size: 1.3rem;
+      outline: none;
+    }
+    fieldset h1 {
+      margin: 20px 0 40px 0;
+      position: relative;
+      text-align: center;
+      background-color: #0066ee;
+      border-radius: 12px;
+    }
+  </style>
 </body>
 </html>
