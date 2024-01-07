@@ -7,16 +7,15 @@
 }
 
 :root {
-  --roxo: #750775;
-  --sombra: #a50ba5;
+  --principal: #0066ee;
+  --sombra: #2b81f3;
 }
 
 body {
   width: 100%;
   height: 100%;
-  background-color: #1a1a1a;
+  background-color: #0a0a0a;
   color: white;
-  overflow-x: hidden;
 }
 
 .logo {
@@ -51,7 +50,7 @@ body {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  border-bottom: 3px solid var(--roxo);
+  border-bottom: 3px solid var(--principal);
   box-shadow: 0 0 12px 1px var(--sombra);
 }
 
@@ -68,7 +67,7 @@ form {
 }
 
 fieldset {
-  border: 4px solid var(--roxo);
+  border: 4px solid var(--principal);
   border-radius: 16px;
   height: 100%;
   padding: 20px 24px;
@@ -76,11 +75,11 @@ fieldset {
 }
 
 legend {
-  border: 1px solid var(--roxo);
+  border: 1px solid var(--principal);
   border-radius: 8px;
   padding: 10px 20px;
   text-align: center;
-  background-color: var(--roxo);
+  background-color: var(--principal);
 }
 
 .inputBox {
@@ -112,11 +111,11 @@ legend {
 .inputUser:valid ~ .inputLabel {
   top: -20px;
   font-size: 12px;
-  color: var(--roxo);
+  color: var(--principal);
 }
 
 #submit {
-  background: linear-gradient(to right, var(--sombra), var(--roxo));
+  background: linear-gradient(to right, var(--sombra), var(--principal));
   border: none;
   outline: none;
   width: 100%;
@@ -128,10 +127,12 @@ legend {
   box-shadow: 0 0 12px 0px var(--sombra);
 }
 
-.objetivo p {
-  font-size: 1.4rem;
+.objetivo p,
+.sexo p {
+  font-size: 1.2rem;
 }
 
-.objetivo label {
-  font-size: 1.2rem;
+.objetivo label,
+.sexo label {
+  font-size: 1rem;
 }
